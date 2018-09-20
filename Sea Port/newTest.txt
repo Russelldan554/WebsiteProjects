@@ -1,0 +1,73 @@
+// File: 1Ports.txt
+// Data file for SeaPort projects
+// Date: Sat Mar 24 15:25:34 EDT 2018
+
+// parameters: 1 5 2 2 2 10
+
+//   ports, docks, pships, cships, jobs, persons
+
+
+// port   name index parent(null)
+
+//    port   <string> <int> <int>
+port Xanshi 10000 0
+
+
+// dock   name index parent(port)
+
+//    dock   <string> <int> <int>
+  
+dock Pier_3 20003 10000 40001
+  
+dock Pier_0 20000 10000 30000
+  
+dock Pier_1 20001 10000 30001
+  
+dock Pier_2 20002 10000 40000
+
+
+// pship  name index parent(dock/port) weight length width draft numPassengers numRooms numOccupied
+
+//    pship  <string> <int> <int> <double> <double> <double> <double> <int> <int> <int>
+    
+pship          Diaphoretic 30000 20000 103.97 361.72 122.96 31.18 2261 667 667
+    
+pship             Retsinas 30001 20001 55.23 220.76 81.01 33.33 977 485 485
+pship             New 30002 10000 55.23 220.76 81.01 33.33 977 485 485
+
+
+// cship  name index parent(dock/port) weight length width draft cargoWeight cargoVolume cargoValue
+
+//    cship  <string> <int> <int> <double> <double> <double> <double> <double> <double> <double>
+    
+cship             Thruputs 40001 20003 60.72 452.22 79.88 22.67 158.84 175.69 62.67
+    
+cship           Deadlocked 40000 20002 83.04 235.61 47.71 28.01 53.25 197.95 312.95
+
+
+// person name index parent skill
+
+//    person <string> <int> <int> <string>
+    
+person               Bonnie 50005 10000 inspector
+    
+person                Jaime 50000 10000 driver
+    
+person                Leigh 50002 10000 painter
+    
+person                 Ivan 50004 10000 engineer
+
+person              Kenneth 50006 10000 cleaner
+    
+person              Woodrow 50001 10000 inspector
+    
+person               Vivian 50003 10000 clerk
+
+
+// job    name index parent duration [skill]+ (one or more, matches skill in person, may repeat)
+
+//    job    <string> <int> <int> <double> [<string>]+
+    
+job         Job_37_15_21 60000 30001 15 painter
+    
+job         Job_23_68_21 60001 30000 20 painter 

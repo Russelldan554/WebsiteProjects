@@ -1,0 +1,116 @@
+// File: 5Ports.txt
+// Data file for SeaPort projects
+// Date: Sat Mar 24 15:27:10 EDT 2018
+// parameters: 5 5 2 2 2 10
+//   ports, docks, pships, cships, jobs, persons
+
+// port   name index parent(null)
+//    port   <string> <int> <int>
+port Fos_Sur_Mer 10004 0
+port Dnepropetrovsk 10002 0
+port Managua 10003 0
+port Puqi 10000 0
+port Toljati 10001 0
+
+// dock   name index parent(port)
+//    dock   <string> <int> <int>
+  dock Pier_19 20019 10004 40009
+  dock Pier_13 20013 10003 30007
+  dock Pier_3 20003 10000 40001
+  dock Pier_5 20005 10001 30003
+  dock Pier_0 20000 10000 30000
+  dock Pier_18 20018 10004 40008
+  dock Pier_14 20014 10003 40006
+  dock Pier_12 20012 10003 30006
+  dock Pier_1 20001 10000 30001
+  dock Pier_2 20002 10000 40000
+  dock Pier_16 20016 10004 30008
+  dock Pier_8 20008 10002 30004
+  dock Pier_9 20009 10002 30005
+  dock Pier_10 20010 10002 40004
+  dock Pier_11 20011 10002 40005
+  dock Pier_4 20004 10001 30002
+  dock Pier_7 20007 10001 40003
+  dock Pier_6 20006 10001 40002
+  dock Pier_15 20015 10003 40007
+  dock Pier_17 20017 10004 30009
+
+// pship  name index parent(dock/port) weight length width draft numPassengers numRooms numOccupied
+//    pship  <string> <int> <int> <double> <double> <double> <double> <int> <int> <int>
+    pship                 Kris 30005 20009 109.75 397.70 112.56 29.78 1675 775 775
+    pship            Balancers 30000 20000 243.69 152.24 102.62 37.37 1485 518 518
+    pship              Codfish 30001 20001 82.76 370.52 57.79 40.02 1576 558 558
+    pship          Firecracker 30008 20016 100.67 431.57 33.72 33.95 317 317 158
+    pship             Shrunken 30007 20013 209.13 479.55 110.44 31.01 1562 810 781
+    pship          Conciliates 30009 20017 184.19 460.34 57.42 20.30 1461 422 422
+    pship                 Dyed 30002 20004 69.50 230.32 37.28 15.55 1677 927 838
+    pship          Deodorizers 30004 20008 192.06 287.66 40.06 15.00 623 269 269
+    pship              Bespake 30003 20005 163.10 266.63 105.81 35.92 13 104 6
+    pship                 Limo 30006 20012 103.58 179.97 91.24 24.34 229 137 114
+
+// cship  name index parent(dock/port) weight length width draft cargoWeight cargoVolume cargoValue
+//    cship  <string> <int> <int> <double> <double> <double> <double> <double> <double> <double>
+    cship           Childliest 40009 20019 203.99 257.09 30.71 25.89 198.21 196.72 358.75
+    cship            Angeluses 40008 20018 56.85 116.13 76.09 32.71 117.47 135.15 787.39
+    cship             Vivisect 40000 20002 139.03 101.04 90.14 26.13 171.35 121.93 278.54
+    cship             Gossipry 40002 20006 122.03 450.37 64.87 22.89 45.80 166.65 555.00
+    cship           Firebricks 40001 20003 116.81 213.06 59.77 22.75 136.95 140.39 456.25
+    cship          Merrymakers 40003 20007 53.06 194.23 93.79 25.20 27.35 161.63 344.60
+    cship               Grippe 40005 20011 231.48 380.39 30.47 32.10 176.05 159.23 325.50
+    cship                Shawn 40006 20014 50.41 350.98 64.82 21.17 104.39 145.53 234.05
+    cship               Perter 40007 20015 127.56 246.28 107.05 19.19 172.71 140.74 159.43
+    cship           Pluguglies 40004 20010 153.94 467.55 101.22 44.71 149.68 133.70 840.01
+
+// person name index parent skill
+//    person <string> <int> <int> <string>
+    person               Arnold 50001 10000 driver
+    person               Thomas 50005 10000 captain
+    person               Arturo 50022 10003 engineer
+    person               Jackie 50003 10000 crew
+    person                 Irma 50006 10000 mechanic
+    person             Mercedes 50037 10004 mate
+     person             Mercedes 50037 10004 painter     person                  Ann 50002 10000 engineer
+    person                  Leo 50018 10002 cleaner
+    person                Leigh 50007 10000 stevedore
+    person               Darrin 50013 10002 engineer
+    person              Rogelio 50036 10004 captain
+    person                Julio 50034 10004 stevedore
+    person                 Rita 50004 10000 inspector
+    person                  Guy 50027 10003 driver
+    person                Vicky 50021 10003 captain
+    person                Irvin 50032 10004 mechanic
+    person              Gerardo 50030 10004 crew
+    person             Michelle 50033 10004 cleaner
+    person                Terri 50016 10002 mate
+    person                 Rick 50029 10003 cleaner
+    person               Miguel 50026 10003 carpenter
+    person                Lucas 50012 10001 craneOperator
+    person               Bobbie 50031 10004 mechanic
+    person                 Otis 50028 10003 mechanic
+    person                   Ed 50035 10004 crew
+    person               Arnold 50014 10002 electrician
+    person                Kerry 50024 10003 electrician
+    person            Nathaniel 50015 10002 captain
+    person               Sergio 50011 10001 stevedore
+    person               Darren 50000 10000 mate
+    person               Dwight 50025 10003 captain
+    person               Bertha 50008 10001 mechanic
+    person               Sharon 50010 10001 clerk
+    person                 Greg 50009 10001 craneOperator
+    person               Stuart 50019 10002 crew
+    person                 Rosa 50023 10003 cleaner
+    person                Tracy 50017 10002 craneOperator
+    person                 Iris 50020 10002 craneOperator
+
+// job    name index parent duration [skill]+ (one or more, matches skill in person, may repeat)
+//    job    <string> <int> <int> <double> [<string>]+
+    job         Job_37_15_21 60008 40008 82.86 painter inspector
+    job         Job_23_68_21 60005 40005 49.09 engineer
+    job         Job_16_17_14 60007 40006 38.77 engineer craneOperator
+    job         Job_59_41_93 60009 40009 81.87
+    job         Job_45_65_15 60000 30001 83.37
+    job         Job_16_68_79 60001 40000 46.27 engineer crew
+    job         Job_59_61_14 60002 30003 41.07 stevedore stevedore
+    job         Job_72_83_33 60006 30006 52.71
+    job         Job_13_81_50 60004 30004 106.53
+    job         Job_86_53_65 60003 40002 65.35 inspector
