@@ -7,14 +7,19 @@ import java.awt.image.BufferStrategy;
 import javax.swing.JMenu;
 import javax.swing.JMenuBar;
 import javax.swing.JMenuItem;
+import javax.swing.JOptionPane;
 
 import dev.druss.snake.display.Display;
 import dev.druss.snake.input.KeyManager;
 import dev.druss.snake.states.GameState;
 import dev.druss.snake.states.State;
-
+/**
+ * version 1.0
+ * @author dan
+ *
+ */
 public class Game implements Runnable{
-
+	private final double VERSION = 1.0;
 	
 	//Class Variables
 	private Display display;
@@ -53,6 +58,8 @@ public class Game implements Runnable{
 		menu = new JMenu("File");
 		JMenuItem retry = new JMenuItem("Restart");
 		menu.add(retry);
+		JMenuItem version = new JMenuItem("Version");
+		menu.add(version);
 		
 		JMenuBar menubar = new JMenuBar();;
 		menubar.add(menu);
@@ -61,6 +68,10 @@ public class Game implements Runnable{
 		retry.addActionListener((ActionEvent e) -> {
 			gameState = new GameState(handler);
 			State.setState(gameState);
+		});
+		
+		version.addActionListener((ActionEvent e) -> {
+			JOptionPane.showMessageDialog(null, "Version: " + VERSION);
 		});
 		
 		handler = new Handler(this);

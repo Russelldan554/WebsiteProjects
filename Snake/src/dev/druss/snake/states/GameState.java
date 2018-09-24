@@ -1,5 +1,6 @@
 package dev.druss.snake.states;
 
+import java.awt.Color;
 import java.awt.Graphics;
 
 import dev.druss.snake.Handler;
@@ -33,9 +34,13 @@ public class GameState extends State{
 	@Override
 	public void render(Graphics g) {
 		world.render(g);
-		
-		player.render(g);
-		
+		if (!player.getGameOver()) {
+			player.render(g);
+		} else {
+			g.setColor(Color.WHITE);
+			g.drawString("Game Over Score: " + player.getScore(), handler.getWidth()/2,handler.getHeight()/2);
+		}
+
 		token.render(g);
 	}
 

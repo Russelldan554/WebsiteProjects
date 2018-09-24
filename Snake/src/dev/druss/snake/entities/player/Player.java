@@ -23,6 +23,10 @@ public class Player extends Entity {
 		this.snake = new int [10000][2];
 		snake[0][0] = (int) this.x;
 		snake[0][1] = (int) this.y;
+		for (int i = size; i > 0; i--) {
+			snake[i][0] = -10;
+			snake[i][1] = -10;
+		}
 		gameOver = false;
 		tx = SPEED;
 		ty = 0;
@@ -138,20 +142,20 @@ public class Player extends Entity {
 			}
 		}
 		
-		
-		if (!gameOver) {
-			for (int i = 0; i < size; i++) {
-				g.setColor(Color.WHITE);
-				g.fillRect(snake[i][0], snake[i][1], this.width, this.width);
-			}	
-		} else {
+		//draw snake
+		for (int i = 0; i < size; i++) {
 			g.setColor(Color.WHITE);
-			g.drawString("Game Over Score: " + score, handler.getWidth()/2,handler.getHeight()/2);
-		}
+			g.fillRect(snake[i][0], snake[i][1], this.width, this.width);
+		}	
+
 	}	
-	
+
 	public int getSize() {
 		return size;
+	}
+	
+	public boolean getGameOver() {
+		return gameOver;
 	}
 
 	public void increaseSize() {
@@ -165,6 +169,10 @@ public class Player extends Entity {
 
 	public int[][] getSnake() {
 		return snake;
+	}
+
+	public int getScore() {
+		return score;
 	}
 
 }

@@ -33,8 +33,8 @@ public class Token extends Entity{
 	private void randomSpot() {
 		int tx = (int) this.x;
 		int ty = (int) this.y;
-		tx =  rand.nextInt(handler.getWidth());
-		ty =  rand.nextInt(handler.getHeight());
+		tx =  rand.nextInt(handler.getWidth()-50);
+		ty =  rand.nextInt(handler.getHeight()-50);
 		tx = tx - (tx % 5);
 		ty = ty - (ty % 5);
 		
