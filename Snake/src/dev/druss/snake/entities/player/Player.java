@@ -128,7 +128,17 @@ public class Player extends Entity {
 	}
 
 	@Override
-	public void render(Graphics g) {		
+	public void render(Graphics g) {
+		//snake collision
+		for (int i = size; i > 0; i--) {
+			if (snake[0][0] == snake[i][0]) {
+				if (snake[0][1] == snake[i][1]) {
+					gameOver = true;
+				}
+			}
+		}
+		
+		
 		if (!gameOver) {
 			for (int i = 0; i < size; i++) {
 				g.setColor(Color.WHITE);
@@ -147,6 +157,10 @@ public class Player extends Entity {
 	public void increaseSize() {
 		score += 10;
 		this.size += 10;
+		for (int i = size; i > size-10; i--) {
+			snake[i][0] = -10;
+			snake[i][1] = -10;
+		}
 	}
 
 	public int[][] getSnake() {
