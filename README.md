@@ -1,2 +1,2 @@
 # WebsiteProjects
-Projects for website portfolio
+Here are the Projects for your website portfolio.
